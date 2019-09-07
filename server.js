@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-  });
+});
 app.use(logger("dev"));
 app.get("/snackers", (req, res) => {
     axios.get("https://s3.amazonaws.com/misc-file-snack/MOCK_SNACKER_DATA.json").then(res1 => {
